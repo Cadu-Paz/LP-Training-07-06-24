@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Treinos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+    <h2>Visualizar Treinos</h2>
+
+    <ul>
+        {% for treino in treinos %}
+            <li>
+                <input type="checkbox" id="treino_{{ treino.id }}" name="treino_{{ treino.id }}">
+                <label for="treino_{{ treino.id }}">{{ treino.nome }}</label>
+            </li>
+        {% endfor %}
+    </ul>
+
+        <button onclick="window.location.href='/home'">Voltar</button>
+        <button onclick="iniciarTreino()">Iniciar Treino</button>
+    </div>
+
+    <script>
+        function iniciarTreino() {
+            // Lógica para iniciar o treino selecionado
+        }
+    </script>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Exercício</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+     <div class="container">
+        <h2>Cadastro de Exercício</h2>
+        <form id="exerciseForm">
+            <input type="text" id="nome_exercicio" name="nome_exercicio" placeholder="Nome do Exercício" required>
+            <input type="text" id="grupo_muscular" name="grupo_muscular" placeholder="Grupo Muscular" required>
+            <input type="text" id="descricao" name="descricao" placeholder="Descrição" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <button onclick="window.location.href='/home'">Voltar</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Meu Perfil</h2>
+        <form id="userForm">
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="text" name="altura" placeholder="Altura" required>
+            <input type="text" name="peso" placeholder="Peso" required>
+            <input type="text" name="objetivo" placeholder="Objetivo" required>
+            <textarea name="obs" placeholder="Observações"></textarea>
+            <button type="submit">Salvar</button>
+        </form>
+        <button onclick="window.location.href='/home?username={{ username }}'">Voltar</button>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

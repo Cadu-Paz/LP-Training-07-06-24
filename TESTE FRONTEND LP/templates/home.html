@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <!-- Botão para meu perfil -->
+        <div class="button-container">
+        <a href="/meu_perfil"><button>Meu Perfil</button></a>
+    </div>
+
+    <h1>Bem-vindo à Família LP, {{ username }}</h1>
+   <!-- Botão para sair -->
+   <div class="button-container">
+        <a href="/"><button>Sair</button></a>
+    </div>
+    
+    </header>
+<!-- sessão de treinos-->
+    <section class="highlighted-recipe">
+        <h2>Meus Treinos</h2>
+        
+        <h4>Aqui voce terá uma visão geral dos seus treinos programados para a semana podendo acessar cada um deles para uma visao mais detalhada</h4>
+       
+        <img src="https://tecnofit-site.s3.sa-east-1.amazonaws.com/media/files/2023/02/13111808/investimento-em-academia-de-musculacao.png" height="180" alt="">
+        <a href="recdestac.html">Ver treino</a>
+       
+             
+        <img src="https://clinicafortius.com.br/app/uploads/2022/12/Corrida-de-rua.png" height="180" alt="">
+        <a href="recdestac.html">Ver treino</a>
+        
+    </section>
+<!-- sessão de aulas-->
+    <section class="highlighted-recipe">
+        <h2>Proximas Aulas</h2>
+        
+        <h4>Aqui voce terá uma visão geral dos seus treinos programados para a semana podendo acessar cada um deles para uma visao mais detalhada</h4>
+        
+        
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEs5vdUnhaZVz4VT47iMMnNqN4aGRsBYmccg&s" height="180" alt="">
+        <a href="recdestac.html">Ver Aula</a>
+        
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ZPxhq0RerUyMy59KvfcLlE3r303ykskO-g&s" height="180" alt="">
+        <a href="recdestac.html">Ver Aula</a>
+        
+    </section>
+
+    <footer>
+ <!-- Botão para exercícios -->
+ <div class="button-container dropdown">
+    <button class="dropbtn">Exercícios</button>
+    <div class="dropdown-content">
+        <a href="/cadastro_exercicio">Cadastrar Exercício</a>
+        <a href="/visualizar_exercicios">Visualizar Exercícios</a>
+    </div>
+</div>
+
+<!-- Botão para Treinos -->
+<div class="button-container dropdown">
+    <button class="dropbtn">Treinos</button>
+    <div class="dropdown-content">
+        <a href="/cadastro_treino">Criar Treino</a>
+        <a href="/visualizar_treinos">Ver Treino</a>
+    </div>
+</div>
+
+
+<!-- Botão para calendário -->
+<div class="button-container">
+    <a href="/calendario"><button>Calendário</button></a>
+</div>       
+    </footer>
+    
+
+ 
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
